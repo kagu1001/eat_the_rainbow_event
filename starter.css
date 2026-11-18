@@ -16,6 +16,17 @@ html {
 h1,
 h2 {
   line-height: 1.25;
+  font-family: "Gowun Batang", serif;
+  font-weight: 600;
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-style: normal;
+  color: var(--color-text);
+}
+
+.fremhaev {
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  color: var(--color-berry);
 }
 
 p,
@@ -23,10 +34,17 @@ li {
   text-wrap: pretty;
 }
 
+.forside_knapper {
+  display: flex;
+  gap: 1rem;
+  justify-self: start;
+  flex-wrap: wrap;
+}
+
 img,
 svg {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -85,4 +103,69 @@ dialog {
   overflow: hidden;
   white-space: nowrap;
   clip-path: inset(100%);
+}
+
+.hero-tekst {
+  display: grid;
+  gap: 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.jordbaer {
+  width: auto;
+  height: 40rem;
+  height: clamp(20rem, 30vw, 60vw);
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+@media (width < 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .jordbaer {
+    margin-left: 0;
+    align-self: center;
+  }
+}
+
+.kort-linje {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/***** annonce *****/
+
+.annonce {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  background: var(--color-berry);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem var(--space-1);
+  font-size: 0.9rem;
+}
+
+.marquee-indhold {
+  display: flex;
+  width: max-content;
+  animation: loeb 20s linear infinite;
+}
+
+.marquee-indhold span {
+  padding-inline-end: 3rem;
+}
+
+@keyframes loeb {
+  to {
+    translate: -50% 0;
+  }
 }
