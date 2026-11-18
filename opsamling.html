@@ -4,7 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opsamling | Eventnavn</title>
+
+  <title>Dine samtalekort | Eat the Rainbow</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,43 +19,117 @@
 </head>
 
 <body>
+
+
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">
-        <img src="imgs/logo.webp" alt="Eat The Rainbow logo">
+
+      <a href="./index.html" class="site-logo">
+        <img src="./imgs/logo.webp" alt="Eat the Rainbow logo">
       </a>
+
       <nav class="site-nav">
-        <button>Menu</button>
+        <button type="button" popovertarget="menu">
+          Menu
+        </button>
+
         <ul class="menu" id="menu" popover>
-          <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html" aria-current="page">Formular</a></li>
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./svg.html">Program</a></li>
+          <li>
+            <a href="./form.html" aria-current="page">
+              Formular
+            </a>
+          </li>
         </ul>
       </nav>
+
     </div>
   </header>
 
+
   <main>
-    <section class="opsamling-page">
-      <div class="opsamling-intro">
-        <h1>Opsamling</h1>
-        <p>Vis brugerens valg som et pass, en invitation eller noget andet, der passer til dit event.</p>
-        <div class="actions">
-          <a class="button" href="./form.html">Tilbage til formular</a>
-        </div>
+
+    <section class="result-section">
+
+      <h1>Dine samtalekort</h1>
+
+      <p class="result-intro">
+        Her er jeres helt personlige samtalekort!
+        Brug dem til at starte hyggelige og sjove
+        samtaler sammen.
+      </p>
+
+
+      <div class="result-information">
+        <span id="result-age"></span>
+        <span id="result-fruit"></span>
       </div>
 
-      <article class="opsamling-placeholder"></article>
+
+      <article class="conversation-card">
+
+        <p class="card-brand">
+          EAT THE RAINBOW 🌈
+        </p>
+
+
+        <div class="card-fruit" id="card-fruit" role="img" aria-label="Barnets yndlingsfrugt">
+          🍓
+        </div>
+
+
+        <p class="card-topic" id="card-topic">
+          Mad og sundhed
+        </p>
+
+
+        <h2 id="card-question" aria-live="polite">
+          Dit personlige spørgsmål kommer her!
+        </h2>
+
+
+        <p class="card-counter" id="card-counter">
+          Kort 1 af 1
+        </p>
+
+      </article>
+
+
+      <div class="card-buttons">
+
+        <button id="previous-card" type="button">
+          ← Forrige kort
+        </button>
+
+        <button id="next-card" type="button">
+          Næste kort →
+        </button>
+
+      </div>
+
+
+      <div class="result-bottom-buttons">
+
+        <a href="./form.html" class="back-to-form">
+          Lav nye samtalekort
+        </a>
+
+      </div>
+
     </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+      <p>Eat the Rainbow</p>
+      <p>© 2026</p>
     </div>
   </footer>
+
   <script src="./script.js"></script>
+
 </body>
 
 </html>
